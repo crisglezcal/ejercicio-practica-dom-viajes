@@ -17,7 +17,7 @@ main {
 }
 
 .contenedor {
-    width: 100vw; /* Mantiene toda la pantalla */
+    width: 100vw;
     margin: 0;
     padding: 25px 0;
     justify-content: center; 
@@ -30,7 +30,7 @@ main {
     position: relative;
     left: 50%;
     right: 50%;
-    margin-left: -50vw; /* Mantiene -50vw para pantalla completa */
+    margin-left: -50vw; 
     margin-right: -50vw;
 }
 
@@ -65,7 +65,6 @@ main {
     display: block;
     margin: 0 auto;
     object-fit: cover;
-    border-radius: 0;
 }
 
 #recomendados {
@@ -119,7 +118,6 @@ main {
     display: block;
     margin: 5px 0;
     object-fit: cover;
-    border-radius: 0;
 }
 
 #destinos p {
