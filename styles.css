@@ -1,21 +1,23 @@
 /* MIS CSS*/
-/* "PRÁCTICA DOM" en letra blanca y fondo negro */
-/* h1 y h2 alineado a la izquierda */
-/* Foto principal centrada y más pequeña */
-/* Cajas de los destinos en fila (arriba imagen, en el medio el título h3 alineado a la izquierda y el texo justificado) */
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    color: #000000; /* Cambiado a negro puro */
+    color: #000000;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
     background-color: #ffffff;
 }
 
+main {
+    padding: 20px 0;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
 .contenedor {
-    width: 100vw;
+    width: 100vw; /* Mantiene toda la pantalla */
     margin: 0;
     padding: 25px 0;
     justify-content: center; 
@@ -25,10 +27,15 @@ body {
     background-color: rgb(32, 31, 31);
     display: flex;
     box-sizing: border-box;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw; /* Mantiene -50vw para pantalla completa */
+    margin-right: -50vw;
 }
 
 .contenedor h1 {
-    font-size: 2.5em;
+    font-size: 40px;
     font-weight: bold;
     margin: 0;
     letter-spacing: 2px;
@@ -36,56 +43,55 @@ body {
 
 #bienvenidos {
     margin: 40px 0 30px 0;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #bienvenidos h2 {
-    font-size: 1.8em;
+    font-size: 28px;
     text-align: left;
-    color: #000000; /* Negro */
+    color: #000000;
     margin-bottom: 20px;
-    /* Quitada la barrita divisoria */
+    max-width: 1000px;
+    margin-left: 0;
+    padding-left: 0;
 }
 
 #banner {
     width: 100%;
-    max-width: 800px;
+    max-width: 1000px;
     height: 400px;
     display: block;
     margin: 0 auto;
     object-fit: cover;
-    border-radius: 0; /* Sin border-radius */
+    border-radius: 0;
 }
 
 #recomendados {
-    max-width: 800px;
-    margin: 0 auto;
     padding: 40px 0;
     display: block;
 }
 
 #recomendados h2 {
-    font-size: 1.8em;
-    color: #000000; /* Negro */
+    font-size: 28px;
+    color: #000000;
     text-align: left;
     margin-bottom: 30px;
-    /* Quitada la barrita divisoria */
 }
 
 #destinos {
     display: flex;
     flex-direction: column;
     gap: 0;
-    max-width: 800px;
-    margin: 0 auto;
     padding: 20px 0;
 }
 
 #destinos h2 {
-    font-size: 1.8em;
+    font-size: 28px;
     text-align: left;
-    margin-bottom: 15px; /* Menos distancia con el selector */
-    color: #000000; /* Negro */
-    /* Quitada la barrita divisoria */
+    margin-bottom: 10px;
+    color: #000000;
 }
 
 #destinos > div {
@@ -99,11 +105,11 @@ body {
 }
 
 #destinos h3 {
-    font-size: 1.1em;
+    font-size: 18px;
     margin: 0;
     font-weight: 900;
     text-align: left;
-    color: #000000; /* Negro */
+    color: #000000;
 }
 
 #destinos img {
@@ -113,29 +119,24 @@ body {
     display: block;
     margin: 5px 0;
     object-fit: cover;
-    border-radius: 0; /* Sin border-radius */
+    border-radius: 0;
 }
 
 #destinos p {
-    font-size: 0.9em;
+    font-size: 14px;
     line-height: 1.4;
-    color: #000000; /* Negro */
+    color: #000000;
     text-align: left;
     margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Misma tipografía */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 select {
     display: block;
     width: 300px;
     padding: 12px;
-    margin: 5px 0 40px 0; /* Menos distancia arriba */
+    margin: 0 0 40px 0;
     border: 2px solid #bdc3c7;
-    border-radius: 0; /* Sin border-radius */
-    font-size: 1em;
+    font-size: 16px;
     background-color: white;
-}
-
-main {
-    padding: 20px 0;
 }

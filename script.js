@@ -92,4 +92,4 @@ destinos2.forEach(ciudad => { // Para cada ciudad de la lista...
 });
 
 // Añade el select al DOM para poner la caja desplegable en la pantalla
-document.body.appendChild(select);
+document.getElementById("destinos").appendChild(select);
