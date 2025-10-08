@@ -1,13 +1,6 @@
-// AÑADIR H2
+// ============================================== AÑADIR DESTINOS RECOMENDADOS ==============================================
 
-const recomendados = document.getElementById("recomendados");
-const subtitulo1 = document.createElement("h2");
-subtitulo1.textContent = "Recomendados";
-recomendados.appendChild(subtitulo1);
-
-// AÑADIR DESTINOS RECOMENDADOS
-
-// Array de destinos:
+// ARRAY DE DESTINOS:
 
 const destinos = [
   {
@@ -27,39 +20,36 @@ const destinos = [
   }
 ];
 
-// Añadir destinos: 
-const seccionDestinos = document.getElementById("destinos");
-    // Para cada destino...
+// AÑADIR DESTINOS RECOMENDADOS:
+
+const tarjetas = document.getElementById("tarjetas");
+    
 destinos.forEach(destino => {
-    // Crea el contenedor div para el destino completo
   const destinoContenedor = document.createElement("div");
-    // Título del destino en h3 al que le añade su correspondiente título del array y metido en el contenedor
+  destinoContenedor.className = "tarjeta";
+
+  // 1º Imagen
+  const imagen = document.createElement("img");
+  imagen.src = destino.url_img;
+  destinoContenedor.appendChild(imagen);
+    
+  // 2º Título
   const tituloDestino = document.createElement("h3");
   tituloDestino.textContent = destino.title;
   destinoContenedor.appendChild(tituloDestino);
-    // Mete cada imagen del array dentro del div que se ha creado
-  const imagen = document.createElement("img");
-  imagen.src = destino.url_img; 
-  destinoContenedor.appendChild(imagen);
-    // Mete cada descripción del array en el contenedor creado en los <p></p>
+    
+  // 3º Descripción
   const descripcion = document.createElement("p");
   descripcion.textContent = destino.description;
   destinoContenedor.appendChild(descripcion);
-    // Junta toda la información completa del destino 
-  seccionDestinos.appendChild(destinoContenedor); 
+    
+  tarjetas.appendChild(destinoContenedor);
 });
 
+// ============================================== AÑADIR DESPLEGABLE DESTINOS ==============================================
 
-// AÑADIR H2
+// ARRAY DE DESTINOS
 
-const destinosTitulo = document.getElementById("destinos");
-const subtitulo2 = document.createElement("h2");
-subtitulo2.textContent = "Destinos";
-destinosTitulo.appendChild(subtitulo2);
-
-// AÑADIR DESPLEGABLE DESTINOS
-
-// Array de destomps
 const destinos2 = [
     "Madrid",
     "Barcelona",
@@ -73,17 +63,20 @@ const destinos2 = [
     "Zaragoza"
 ];
 
-// Crea el elemento select
+// CREA EL ELEMENTO SELECT
+
 const select = document.createElement("select");
 select.name = "destinos";
 
-// Añade "Burgos" como la opción visible
+// AÑADE "BURGOS" COMO LA OPCIÓN VISIBLE
+
 const opcionDefault = document.createElement("option");
 opcionDefault.value = "burgos";
 opcionDefault.textContent = "Burgos";
 select.appendChild(opcionDefault);
 
-// Añade el resto de ciudades
+// AÑADE EL RESTO DE CIUDADES
+
 destinos2.forEach(ciudad => { // Para cada ciudad de la lista...
     const option = document.createElement("option"); // Crea una opción nueva
     option.value = ciudad.toLowerCase();
@@ -91,5 +84,7 @@ destinos2.forEach(ciudad => { // Para cada ciudad de la lista...
     select.appendChild(option); // Lo mete en la caja desplegable
 });
 
-// Añade el select al DOM para poner la caja desplegable en la pantalla
+
+// AÑADE EL SELECT AL DOM PARA PONER LA CAJA DESPLEGABLE EN LA PANTALLA
+
 document.getElementById("destinos").appendChild(select);
