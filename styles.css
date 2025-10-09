@@ -44,7 +44,7 @@ table {
 	border-spacing: 0;
 }
 
-/* MIS CSS*/
+/* MIS CSS - MOBILE FIRST */
 
 /* Body, header, main y section */
 
@@ -64,46 +64,46 @@ header {
     text-align: center; 
     color: white;
     background-color: rgb(32, 31, 31);
-    padding: 20px 0;
+    padding: 15px 0;
 }
 
 header h1 {
-    font-size: 40px;
+    font-size: 28px;
     text-align: center;
     margin: 0;
     width: 100%;
 }
 
 main {
-    margin: 0px 80px; 
+    margin: 0px 20px; 
 }
 
 section {
-    margin: 0px 250px 30px 250px; 
+    margin: 0px 0px 25px 0px; 
 }
 
 /* Títulos */
 
 h1 {
-    font-size: 40px;
+    font-size: 28px;
     text-align: center;
     margin: 0;
 }
 
 h2 {
-    font-size: 30px;
+    font-size: 22px;
     text-align: left;
-    margin-top: 40px;
-    margin-bottom: 20px;
+    margin-top: 30px;
+    margin-bottom: 15px;
     margin-left: 0;
     margin-right: 0;
 }
 
 h3 {
-    font-size: 20px;
+    font-size: 18px;
     text-align: left;
     margin-top: 0;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
     margin-left: 0;
     margin-right: 0;
 }
@@ -112,8 +112,8 @@ h3 {
 
 #banner {
     width: 100%;
-    max-width: 1700px;
-    height: 400px;
+    max-width: 100%;
+    height: 200px;
     object-fit: cover;
     display: block;
     margin: 0 auto;
@@ -123,84 +123,237 @@ h3 {
 
 #tarjetas {
     display: flex;
-    flex-direction: row;
-    gap: 20px;
+    flex-direction: column;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
 .tarjeta {
     flex: 1;
     background-color: #f8f9fa;
     border-radius: 8px;
-    padding: 20px;
+    padding: 15px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .tarjeta img {
     width: 100%;
-    height: 200px;
+    height: 150px;
     object-fit: cover;
     border-radius: 4px;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
 }
 
 .tarjeta p {
-    font-size: 15px;
+    font-size: 14px;
     color: #000000;
     text-align: justify;
     margin: 0;
-    line-height: 1.5;
+    line-height: 1.4;
 }
 
-/* Destinos */
-
 #destinos img {
-    width: 100px;
-    height: 80px;
+    width: 80px;
+    height: 70px;
     object-fit: cover;
     border-radius: 4px;
 }
 
 #destinos p {
-    font-size: 15px;
+    font-size: 14px;
     color: #000000;
     text-align: justify;
-    max-width: 400px;
+    max-width: 100%;
     margin: 0;
-    line-height: 1.5;
+    line-height: 1.4;
 }
 
 .destino-item {
     display: flex;
+    flex-direction: column;
     align-items: flex-start;
-    gap: 15px;
-    margin-bottom: 20px;
+    gap: 12px;
+    margin-bottom: 15px;
     background-color: #f8f9fa;
-    padding: 15px;
+    padding: 12px;
     border-radius: 8px;
 }
 
 .destino-info {
     flex: 1;
+    width: 100%;
 }
-
-/* Selector de destino */
 
 select {
     display: block;
     width: 100%;
-    max-width: 1700px;
-    padding: 12px;
+    max-width: 100%;
+    padding: 10px;
     border: 2px solid #bdc3c7;
-    font-size: 16px;
+    font-size: 14px;
     background-color: white;
     border-radius: 4px;
-    margin: 20px 0;
+    margin: 15px 0;
 }
 
-/* Separador */
 hr {
     border: none;
     height: 1px;
     background-color: #bdc3c7;
-    margin: 40px 80px; 
+    margin: 30px 20px; 
+}
+
+/* MEDIA QUERIES */
+
+/* Tablet */
+
+@media (min-width: 768px) {
+    header {
+        padding: 18px 0;
+    }
+    
+    header h1 {
+        font-size: 32px;
+    }
+    
+    h1 {
+        font-size: 32px;
+    }
+    
+    h2 {
+        font-size: 26px;
+        margin-top: 35px;
+        margin-bottom: 18px;
+    }
+    
+    h3 {
+        font-size: 19px;
+    }
+    
+    main {
+        margin: 0px 40px; 
+    }
+    
+    section {
+        margin: 0px 80px 30px 80px; 
+    }
+    
+    #banner {
+        height: 300px;
+    }
+    
+    .tarjeta {
+        padding: 18px;
+    }
+    
+    .tarjeta img {
+        height: 180px;
+    }
+    
+    .destino-item {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    
+    #destinos img {
+        width: 90px;
+        height: 75px;
+    }
+    
+    #destinos p {
+        max-width: 400px;
+    }
+    
+    select {
+        padding: 11px;
+        font-size: 15px;
+    }
+    
+    hr {
+        margin: 35px 40px; 
+    }
+}
+
+/* Desktop */
+
+@media (min-width: 1024px) {
+    header {
+        padding: 20px 0;
+    }
+    
+    header h1 {
+        font-size: 40px;
+    }
+    
+    h1 {
+        font-size: 40px;
+    }
+    
+    h2 {
+        font-size: 30px;
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+    
+    h3 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    
+    main {
+        margin: 0px 80px; 
+    }
+    
+    section {
+        margin: 0px 250px 30px 250px; 
+    }
+    
+    #banner {
+        height: 400px;
+        max-width: 1700px;
+    }
+    
+    #tarjetas {
+        flex-direction: row;
+        gap: 20px;
+        flex-wrap: nowrap;
+    }
+    
+    .tarjeta {
+        padding: 20px;
+    }
+    
+    .tarjeta img {
+        height: 200px;
+    }
+    
+    .tarjeta p {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+    
+    #destinos img {
+        width: 100px;
+        height: 80px;
+    }
+    
+    #destinos p {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+    
+    .destino-item {
+        padding: 15px;
+        gap: 15px;
+    }
+    
+    select {
+        padding: 12px;
+        font-size: 16px;
+        max-width: 1700px;
+    }
+    
+    hr {
+        margin: 40px 80px; 
+    }
 }
