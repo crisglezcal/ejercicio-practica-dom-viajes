@@ -126,6 +126,9 @@ h3 {
     flex-direction: column;
     gap: 15px;
     flex-wrap: wrap;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%
 }
 
 .tarjeta {
