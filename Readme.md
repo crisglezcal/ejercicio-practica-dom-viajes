@@ -1,39 +1,90 @@
-Utilizando las fotos de ejemplo, generar una web como la que se puede ver en el boceto pasado. Utilizar HTML,CSS, JS.
+# 🌍 EJERCICIO - Práctica DOM: Viajes
 
-NOTA: Las imágenes de los viajes y opciones del selector deben ser generadas haciendo manipulación del DOM con JS. No hace falta generar absolutamente todo desde JS. Lo que sea estático como header, footer, foto principal, etc... se añade directamente en el HTML, y cosas dinámicas como las tarjetas de destinos preferidos  y ciudades, añadir con JS
+## 📋 Descripción del proyecto
 
-Para los desitinos recomendados, podéis crearos un array de objetos que contenga los datos y las URL de las imágenes que os tenéis que descargar. Después, podéis iterar con un bucle y renderizar en el DOM:
+Este proyecto es una landing page para una agencia de viajes desarrollada como ejercicio del bootcamp de Full Stack Web Developer. La aplicación muestra destinos recomendados y un selector de ciudades, implementando manipulación del DOM con JavaScript.
 
-const data = [
-  {
-    title: "Example Title 1",
-    description: "Example Description 1",
-    url_img: "../assets/example-url-1.jpg"
-  },
-  {
-    title: "Example Title 2",
-    description: "Example Description 2",
-    url_img: "../assets/example-url-2.jpg"
-  },
-  {
-    title: "Example Title 3",
-    description: "Example Description 3",
-    url_img: "../assets/example-url-3.jpg"
-  }
-];
+### 🎯 Objetivos
 
-Lo mismo para los destinos. Podéis generar un array con los nombres de las ciudades
+**🧾 Enunciado del ejercicio**
 
-const cities = [
-"Madrid",
-"Barcelona",
-"Valencia",
-"Seville",
-"Bilbao",
-"Granada",
-"Malaga",
-"Palma de Mallorca",
-"Alicante",
-"Zaragoza"
-];
-La solución deberá subirse a GitHub.# ejercicio-practica-dom-viajes
+Utilizando las fotos de ejemplo, generar una web como la que se puede ver en el boceto. Utilizar HTML, CSS, JS.
+
+**Requisitos específicos:**
+- Las imágenes de los viajes y opciones del selector deben ser generadas haciendo manipulación del DOM con JS
+- Elementos estáticos (header, footer, foto principal) se añaden directamente en el HTML
+- Elementos dinámicos (tarjetas de destinos preferidos y ciudades) se añaden con JS
+
+**Fase 1: Estructura HTML estática**
+- ✅ Header con título
+- ✅ Sección de bienvenida con banner
+- ✅ Secciones para recomendados y destinos
+- ✅ Estructura semántica
+
+**Fase 2: Manipulación del DOM - Destinos recomendados**
+- ✅ Crear array de objetos con datos de destinos
+- ✅ Generar tarjetas dinamicas con `createElement()`
+- ✅ Añadir imágenes, títulos y descripciones
+- ✅ Utilizar `appendChild()` para insertar en el DOM
+
+**Fase 3: Manipulación del DOM - Selector de destinos**
+- ✅ Crear elemento `select` 
+- ✅ Generar opciones desde un array de ciudades
+- ✅ Añadir opción por defecto "Burgos"
+- ✅ Insertar el selector en la sección correspondiente
+
+**Fase 4: Maquetación CSS**
+- ✅ Maquetación igual que la imagen modelo
+- ✅ Diseño mobile first
+- ✅ Media queries
+
+
+## 🛠️ Tecnologías usadas
+
+- **HTML5** 📝
+- **CSS3** 🖌️
+- **JavaScript** 💻
+
+---
+
+## 🗂️ Estructura del proyecto
+
+### 🎪 Header
+- Título principal "PRÁCTICA DOM"
+
+### 📖 Sección principal
+
+#### 🏞️ Sección Bienvenidos
+- Título "Bienvenidos"
+- Banner principal (imagen estática)
+
+#### ⭐ Sección Recomendados
+- **Tarjetas dinámicas** generadas con JS que incluyen:
+  - **Imagen** del destino 🖼️
+  - **Título** del viaje 📖
+  - **Descripción** detallada 📝
+
+#### 🗺️ Sección Destinos
+- **Selector desplegable** generado con JS que incluye:
+  - Opción por defecto "Burgos" 🏰
+  - Lista de ciudades españolas 🇪🇸
+
+### 👟 Footer
+- Información del proyecto
+
+---
+
+## 🌐 URL del despliegue
+
+### 🚀 GitHub Pages:
+
+🔗 https://crisglezcal.github.io/ejercicio-practica-dom-viajes/
+
+---
+
+## ⚙️ Funcionalidades implementadas
+
+- **Generación dinámica de tarjetas** 🃏
+- **Creación de elementos select** 📋
+- **Manipulación del DOM** 🛠️
+- **Inserción de elementos con appendChild()** 📤
